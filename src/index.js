@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducer/index';
 import injectTapEventPlugin from 'react-tap-event-plugin'
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
@@ -8,6 +11,8 @@ import { blue500, cyan500 } from 'material-ui/styles/colors';
 injectTapEventPlugin();
 
 import App from './components/app';
+
+const createStoreWithMiddleWare = applyMiddleware()(createStore);
 
 
 const muiTheme = getMuiTheme({
@@ -19,8 +24,10 @@ const muiTheme = getMuiTheme({
 });
 
 ReactDOM.render(
-    <MuiThemeProvider muiTheme={muiTheme}>
-        <App />
-    </MuiThemeProvider>,
+    <Provider store={createStoreWithMiddleWare(reducers)}>
+        <MuiThemeProvider muiTheme={muiTheme}>
+            <App />
+        </MuiThemeProvider>
+    </Provider>,
     document.getElementById('root')
 );
