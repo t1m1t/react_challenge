@@ -10,7 +10,7 @@ import styles from './app.css';
 class App extends Component {
 
     submitForm(vals){
-        console.log('Form values:', vals);
+        console.log('Form values on submit:', vals);
     }
 
     renderTextField({input, label}){
@@ -18,7 +18,6 @@ class App extends Component {
     }
 
     renderSlider({input: {onChange, value}, name, defaultValue, min, max}){
-
         if(!value){
             defaultValue = defaultValue || min;
             onChange(defaultValue);
@@ -28,8 +27,7 @@ class App extends Component {
     }
 
     render(){
-
-        const { handleSubmit, reset } = this.props;
+        const { handleSubmit } = this.props;
         return (
             <div className={styles.app}>
                 <Paper className={styles.addForm} zDepth={4}>
