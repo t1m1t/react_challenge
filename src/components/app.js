@@ -1,5 +1,6 @@
 import React from 'react';
-import './app.css';
+import Dogs from './dogs';
+import './css/app.css';
 import logo from './imgs/logo.svg';
 
 const App = () => (
@@ -8,6 +9,7 @@ const App = () => (
             <img src={logo} className="rotate"/>
             <h1>Welcome to React!</h1>
         </div>
+        <Dogs/>
     </div>
 );
 
