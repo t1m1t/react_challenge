@@ -10,7 +10,7 @@
 }
 
 .rotate {
-    animation: spin 10s linear infinite;
+    animation: spin 2s linear infinite;
 }
 
 @keyframes spin {
