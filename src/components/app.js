@@ -1,14 +1,15 @@
 import React from 'react';
-import './app.css';
-import logo from './imgs/logo.svg';
-
+import { Route } from 'react-router-dom';
+import requireAuth from './require_auth';
+import Nav from './nav';
+import Home from './home';
+import Secret from './secret';
 
 const App = () => (
-    <div>
-        <div className="app">
-            <img src={logo} className="rotate"/>
-            <h1>Welcome to React!</h1>
-        </div>
+    <div className="container mt-3">
+        <Nav />
+        <Route exact path="/" component={Home} />
+        <Route path="/secret" component={requireAuth(Secret)} />
     </div>
 );
 
