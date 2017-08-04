@@ -1,14 +1,16 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
 import Home from './home';
+import NavBar from './nav_bar';
+import Features from './features';
 
 
 const App = () => (
-    <Route>
     <div className="container">
-        <Home exact path="/" component={Home} />
+        <NavBar />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/features" component={Features} />
     </div>
-    </Route>
 );
 
 export default App;
