@@ -1,15 +1,14 @@
 import React from 'react';
-import './app.css';
-import logo from './imgs/logo.svg';
+import { Route } from 'react-router-dom';
+import Home from './home';
 
 
 const App = () => (
-    <div>
-        <div className="app">
-            <img src={logo} className="rotate"/>
-            <h1>Welcome to React!</h1>
-        </div>
+    <Route>
+    <div className="container">
+        <Home exact path="/" component={Home} />
     </div>
+    </Route>
 );
 
 export default App;
