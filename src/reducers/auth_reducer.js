@@ -7,11 +7,12 @@ export default function(state = DEFAULT_STATE, action){
         case types.SIGNIN:
         case types.SIGNUP:
             return { ...state, authorized: true, error: null };
+        case types.LOGOUT:
+            return {...DEFAULT_STATE};
         case types.ERROR:
-        console.log('Error in reducer:', action);
             return { ...state, error:action.error };
         case types.FETCH_MSG:
-        return { ...state, msg:action.payload };
+            return { ...state, msg:action.payload };
         default:
             return state;
     }

@@ -38,6 +38,14 @@ export function signup({email, password}){
     };
 };
 
+export function logout(){
+    localStorage.removeItem('token');
+
+    return{
+        type: types.LOGOUT
+    }
+}
+
 export function fetchMsg(){
     return dispatch => {
         axios.get(BASE_URL, { headers: {authorization: localStorage.getItem('token')}}).then( resp => {
