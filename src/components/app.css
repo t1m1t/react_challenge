@@ -1,23 +1,54 @@
-.app {
-    background-color: #000;
-    color: #fff;
-    padding: 50px;
-    text-align: center;
-}
-
-.app img {
-    height: 100px;
-}
-
-.rotate {
+/* .rotate {
     animation: spin 10s linear infinite;
-}
+} */
 
-@keyframes spin {
+/* @keyframes spin {
     from {
         transform: rotate(0deg);
     }
     to {
         transform: rotate(360deg);
     }
+} */
+
+
+/* main app section */
+.about_us{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 15px;
+    background: #77abff;
+}
+
+.top_pane_area,
+.bottom_staff_area {
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+}
+
+
+/* pane section */
+.panes{
+    background-color: white;
+    margin: 20px 10px;
+    width: 300px;
+    height: 400px;
+    border: 2px solid black;
+    border-radius: 15px;
+    display: inline-block;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+
+/* staff section */
+.prof_pic{
+    width: 150px;
+    height: 150px;
+    margin: 20px; 
+    border: 2px solid black;
+    border-radius: 15px;
+    box-shadow: 0 8px 6px -6px black;
 }

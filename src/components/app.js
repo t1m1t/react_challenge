@@ -1,13 +1,20 @@
 import React from 'react';
 import './app.css';
-import logo from './imgs/logo.svg';
+import StaffSection from './staff_section';
+import PaneOne from './pane_1';
+import PaneTwo from './pane_2';
+import PaneThree from './pane_3';
 
 
 const App = () => (
-    <div>
-        <div className="app">
-            <img src={logo} className="rotate"/>
-            <h1>Welcome to React!</h1>
+    <div className="about_us">
+        <div className="top_pane_area">
+            <PaneOne />
+            <PaneTwo />
+            <PaneThree />
+        </div>
+        <div className="bottom_staff_area">
+            <StaffSection />
         </div>
     </div>
 );
