@@ -13,13 +13,17 @@
 
 
 /* main app section */
-.about_us{
+.main_section{
     width: 80%;
     margin: 0 auto;
     text-align: center;
     border: 2px solid black;
     border-radius: 15px;
     background: #77abff;
+}
+
+.about_us_title{
+    color: white;
 }
 
 .top_pane_area,
