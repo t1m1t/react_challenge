@@ -11,26 +11,20 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .about_us_title{
     color: white;
     margin: 22px 0;
-    font-size: 55px;
+    font-size: 70px;
     font-family: simpsons_font;
     text-shadow:
-            black 2px 0px 0px,
-            black 1.75517px 0.958851px 0px,
-            black 1.0806px 1.68294px 0px,
-            black 0.141474px 1.99499px 0px,
-            black -0.832294px 1.81859px 0px,
-            black -1.60229px 1.19694px 0px,
-            black -1.97998px 0.28224px 0px,
-            black -1.87291px -0.701566px 0px,
-            black -1.30729px -1.5136px 0px,
-            black -0.421592px -1.95506px 0px,
-            black 0.567324px -1.91785px 0px,
-            black 1.41734px -1.41108px 0px,
-            black 1.92034px -0.558831px 0px;
+            4px 4px 0 black,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 10px black;
 }
+
 .top_pane_area,
 .bottom_staff_area {
     text-align: center;
@@ -42,6 +36,7 @@
     justify-content: center;
 }
 
+
 /* pane section */
 .panes{
     background-color: lightgoldenrodyellow;
@@ -51,42 +46,32 @@
     border: 3px solid black;
     border-radius: 15px;
     display: inline-block;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 12px 6px -6px black;
     text-align: left;
 }
-.profile_pane_pic{
+
+.person_info{
+    margin-left: 24px;
+    font-size: 22px;
+    color: white;
+    text-shadow:
+            2px 2px 0 black,
+            -1px -1px 0 black,
+            1px -1px 0 black,
+            -1px 1px 0 black,
+            1px 1px 5px black;
+}
+
+.new_prof_pic{
     background-color: white;
     width: 150px;
     height: 150px;
     margin: 20px;
     border: 3px solid black;
     border-radius: 15px;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 12px 6px -6px black;
 }
-.person_info{
-    margin-left: 24px;
-    font-size: 22px;
-    text-shadow:
-            black 2px 0px 0px,
-            black 1.75517px 0.958851px 0px,
-            black 1.0806px 1.68294px 0px,
-            black 0.141474px 1.99499px 0px,
-            black -0.832294px 1.81859px 0px,
-            black -1.60229px 1.19694px 0px,
-            black -1.97998px 0.28224px 0px,
-            black -1.87291px -0.701566px 0px,
-            black -1.30729px -1.5136px 0px,
-            black -0.421592px -1.95506px 0px,
-            black 0.567324px -1.91785px 0px,
-            black 1.41734px -1.41108px 0px,
-            black 1.92034px -0.558831px 0px;
-    color: white;
-}
-.new_prof_pic{
-    width: 150px;
-    height: 152px;
-    border-radius: 15px;
-}
+
 
 /* staff section */
 .prof_pic{
@@ -95,5 +80,24 @@
     margin: 20px;
     border: 3px solid black;
     border-radius: 15px;
-    box-shadow: 0 8px 6px -6px black;
+    box-shadow: 0 12px 6px -6px black;
+    cursor: pointer;
+}
+
+.prof_pic:hover {
+    box-shadow: 0 4px 8px 0 black,
+    0 6px 20px 0 black;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0% {bottom: 0px;}
+    50% {bottom: 20px;}
+    100% {bottom: 0px;}
+}
+
+.prof_pic:active {
+    opacity: 0.8;
+    box-shadow: 0 12px 6px -6px gray;
+    transform: translateY(4px);
 }

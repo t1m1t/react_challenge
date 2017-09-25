@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TransitionGroup from 'reac'
 import './app.css';
 import StaffSection from './staff_section';
 import homer from './imgs/homer_simpson.jpg';
@@ -7,6 +8,7 @@ import abe from './imgs/abe_simpson.jpg';
 import artie from './imgs/arty.jpg';
 import ralph from './imgs/ralph.jpg';
 import patty from './imgs/patty.jpg';
+
 
 
 class App extends Component {
@@ -49,7 +51,7 @@ class App extends Component {
                     paneThree:{
                     profile_img: <span>{this.state.paneTwo.profile_img}</span>,
                     name: <span>{this.state.paneTwo.name}</span>,
-                    description: <span>{this.state.paneThree.description}</span>
+                    description: <span>{this.state.paneTwo.description}</span>
                 }
             });
         } else if (source == lisa){
@@ -67,15 +69,15 @@ class App extends Component {
                 paneThree:{
                     profile_img: <span>{this.state.paneTwo.profile_img}</span>,
                     name: <span>{this.state.paneTwo.name}</span>,
-                    description: <span>{this.state.paneThree.description}</span>
+                    description: <span>{this.state.paneTwo.description}</span>
                 }
             });
         } else if (source == abe){
             this.setState({
                 paneOne: {
-                    profile_img: <img className="new_prof_pic" src={abe}/>,
-                    name: 'Abe Simpson',
-                    description: 'Abe is from the city of Springfield.'
+                    profile_img: [<img className="new_prof_pic" src={abe}/>],
+                    name: ['Abe Simpson'],
+                    description: ['Abe is from the city of Springfield.']
                 },
                 paneTwo:{
                     profile_img: <span>{this.state.paneOne.profile_img}</span>,
@@ -85,7 +87,7 @@ class App extends Component {
                 paneThree:{
                     profile_img: <span>{this.state.paneTwo.profile_img}</span>,
                     name: <span>{this.state.paneTwo.name}</span>,
-                    description: <span>{this.state.paneThree.description}</span>
+                    description: <span>{this.state.paneTwo.description}</span>
                 }
             });
         } else if (source == artie){
@@ -103,7 +105,7 @@ class App extends Component {
                 paneThree:{
                     profile_img: <span>{this.state.paneTwo.profile_img}</span>,
                     name: <span>{this.state.paneTwo.name}</span>,
-                    description: <span>{this.state.paneThree.description}</span>
+                    description: <span>{this.state.paneTwo.description}</span>
                 }
             });
         } else if (source == ralph){
@@ -121,7 +123,7 @@ class App extends Component {
                 paneThree:{
                     profile_img: <span>{this.state.paneTwo.profile_img}</span>,
                     name: <span>{this.state.paneTwo.name}</span>,
-                    description: <span>{this.state.paneThree.description}</span>
+                    description: <span>{this.state.paneTwo.description}</span>
             }
         });
         }else if (source == patty){
@@ -139,7 +141,7 @@ class App extends Component {
                 paneThree:{
                     profile_img: <span>{this.state.paneTwo.profile_img}</span>,
                     name: <span>{this.state.paneTwo.name}</span>,
-                    description: <span>{this.state.paneThree.description}</span>
+                    description: <span>{this.state.paneTwo.description}</span>
                 }
             });
         }
@@ -150,8 +152,9 @@ class App extends Component {
             <div className="main_section">
                 <h1 className="about_us_title">About Us</h1>
                 <div className="top_pane_area">
+
                     <div className="panes">
-                        <div className="profile_pane_pic">
+                        <div>
                             {this.state.paneOne.profile_img}
                         </div>
                         <div className="person_info">
@@ -160,7 +163,7 @@ class App extends Component {
                         </div>
                     </div>
                     <div className="panes">
-                        <div className="profile_pane_pic">
+                        <div>
                             {this.state.paneTwo.profile_img}
                         </div>
                         <div className="person_info">
@@ -169,7 +172,7 @@ class App extends Component {
                         </div>
                     </div>
                     <div className="panes">
-                        <div className="profile_pane_pic">
+                        <div>
                             {this.state.paneThree.profile_img}
                         </div>
                         <div className="person_info">
@@ -185,5 +188,6 @@ class App extends Component {
         )
     }
 };
+
 
 export default App;
