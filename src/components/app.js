@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './style.css';
 import StaffSection from './staff_section';
 import homer from './imgs/homer_simpson.jpg';
 import lisa from './imgs/lisa_simpson.jpg';
@@ -6,6 +7,7 @@ import abe from './imgs/abe_simpson.jpg';
 import artie from './imgs/arty.jpg';
 import ralph from './imgs/ralph.jpg';
 import patty from './imgs/patty.jpg';
+
 
 
 class App extends Component {
@@ -149,7 +151,6 @@ class App extends Component {
             <div className="main_section">
                 <h1 className="about_us_title">About Us</h1>
                 <div className="top_pane_area">
-
                     <div className="panes">
                         <div>
                             {this.state.paneOne.profile_img}

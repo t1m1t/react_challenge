@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './app.css';
+import './style.css';
 import homer from './imgs/homer_simpson.jpg';
 import lisa from './imgs/lisa_simpson.jpg';
 import abe from './imgs/abe_simpson.jpg';
