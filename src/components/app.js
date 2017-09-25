@@ -20,12 +20,12 @@ class App extends Component {
             paneTwo: {
                 profile_img: <img className="new_prof_pic" src={lisa}/>,
                 name: 'Lisa Simpson',
-                description: 'Lisa is from the city of Springfield.'
+                description: 'Lisa loves to play the saxophone.'
             },
             paneThree: {
                 profile_img: <img className="new_prof_pic" src={abe}/>,
                 name: 'Abe Simpson',
-                description: 'Abe is from the city of Springfield.'
+                description: 'Abe fought in World War II.'
             }
         }
 
@@ -56,7 +56,7 @@ class App extends Component {
                 paneOne: {
                     profile_img: <img className="new_prof_pic" src={lisa}/>,
                     name: 'Lisa Simpson',
-                    description: 'Lisa is from the city of Springfield.'
+                    description: 'Lisa loves to play the saxophone.'
                 },
                 paneTwo:{
                     profile_img: <span>{this.state.paneOne.profile_img}</span>,
@@ -74,7 +74,7 @@ class App extends Component {
                 paneOne: {
                     profile_img: <img className="new_prof_pic" src={abe}/>,
                     name: 'Abe Simpson',
-                    description: 'Abe is from the city of Springfield.'
+                    description: 'Abe fought in World War II.'
                 },
                 paneTwo:{
                     profile_img: <span>{this.state.paneOne.profile_img}</span>,
@@ -92,7 +92,7 @@ class App extends Component {
                 paneOne: {
                     profile_img: <img className="new_prof_pic" src={artie}/>,
                     name: 'Artie Ziff',
-                    description: 'Artie is from the city of Springfield.'
+                    description: 'Artie lost Marge to Homer.'
                 },
                 paneTwo:{
                     profile_img: <span>{this.state.paneOne.profile_img}</span>,
@@ -110,7 +110,7 @@ class App extends Component {
                 paneOne: {
                     profile_img: <img className="new_prof_pic" src={ralph}/>,
                     name: 'Ralph Wiggum',
-                    description: 'Ralph is from the city of Springfield.'
+                    description: 'Ralph loves to eat glue.'
                 },
                 paneTwo:{
                     profile_img: <span>{this.state.paneOne.profile_img}</span>,
@@ -128,7 +128,7 @@ class App extends Component {
                 paneOne: {
                     profile_img: <img className="new_prof_pic" src={patty}/>,
                     name: 'Patty Bouvier',
-                    description: 'Patty is from the city of Springfield.'
+                    description: 'Patty and her sister hate Homer.'
                 },
                 paneTwo:{
                     profile_img: <span>{this.state.paneOne.profile_img}</span>,
