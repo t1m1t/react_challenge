@@ -13,7 +13,7 @@ class StaffSection extends Component {
         let image_clicked = this.props.image_clicked;
 
         return(
-            <div>
+            <div className="staff_section">
                 <div>
                     <img className="prof_pic" src={homer} onClick={() => image_clicked(homer)}/>
                     <img className="prof_pic" src={lisa} onClick={() => image_clicked(lisa)}/>
